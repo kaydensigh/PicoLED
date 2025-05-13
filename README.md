@@ -1,6 +1,7 @@
 <p align="middle">
   <img src="render.png" height="400" />
   <img src="schematic.png" height="400" /> 
+  <img src="product.jpg" height="400" /> 
 </p>
 
 # PicoLED
@@ -25,8 +26,7 @@ Using GP8-11 (pins 11-15) because they're a convenient position. The traces have
 ### Screw terminals
 
 The biggest one that can fit 4 terminals at each end of a Pico footprint.
-Turned out to be 3.5mm, though we'll see when it's made whether I can still fit headers on either side.
-The alignment is so that they stick out just a bit, to make fitting a case easier.
+Turned out to be 3.5mm, and there's space for GPIO headers on either side.
 
 You may want smaller terminals if you want to mount the HAT under a Pico. I plan to put it on top of a W5500-EVB-Pico.
 
@@ -39,7 +39,6 @@ You may want smaller terminals if you want to mount the HAT under a Pico. I plan
 FB pin of AP63205 (reads 5V) avoids the inductor's eddy current area. (Not sure if really necessary).
 
 ### Capacitor ratings
-
 
 The AP63205 datasheet gives suggested values for external components,
 but it's a little unclear whether capacitances are effective or nominal.
@@ -81,3 +80,28 @@ In particular, AP63205 was in stock at LCSC but not JLCPCB. The options seemed t
 - Redesign with a different device, but I couldn't find any that were comparably cheap, low-part-count, and could go down to a VCC of 5V (for 5V output).
 
 I ended up just making a pre-order.
+
+### Cost
+
+PCB: 2 USD for 5 pieces (the usual JLCPCB special)
+
+|Assembly | USD |
+|---|---:|
+| Setup fee | 8.00 |
+| Stencil | 1.50 |
+| Components | 6.79 |
+| Extended components fee | 18.00 |
+| SMT Assembly | 0.29 |
+| Hand-soldering labor fee | 3.50 |
+| Manual Assembly | 0.63 |
+| Shipping (DHL) | 18.00 |
+| | |
+| Total | 56.71 |
+
+So it looks like most of the cost is due to using many extended components, and the hand-soldering needed for the terminals.
+
+This didn't include the preordered AP63205, which ended up costing 0.96 each. All up each piece cost 12.30.
+
+IIUC, only the components, SMT assembly, and manual assembly fees scale with number of pieces, so extrapolating out to 30 pieces (my remaining AP63205 inventory), another order should cost 49 + 6 * 8.6 = 101, or 3.37 each.
+
+Let me know if you're interested in splitting an order, or if you're ordering some yourself.
