@@ -21,7 +21,7 @@ Done in EasyEDA, then exported to here so we can version control it.
 
 ### Pico GPIO
 
-Using GP8-11 (pins 11-15) because they're a convenient position. The traces have a space where they can be cut if you don't want these. The 3v3 inputs to the level shifter are sized like and aligned with header through-holes, so they can be remapped.
+Using GP4-7 (pins 6-10) because they're a convenient position. The traces have a space where they can be cut if you don't want these. The 3v3 inputs to the level shifter are sized like and aligned with header through-holes, so they can be remapped.
 
 ### Screw terminals
 
@@ -59,7 +59,7 @@ In the datasheet, the schematic indicates 2x22uF for the output capacitor, but b
 In EasyEDA:
 
 1. Rebuild copper regions for all layers.
-1. Increment version number on bottom silkscreen.
+1. Increment version number on silkscreen.
 1. Take screenshots of schematic and 3D view.
 1. Save project locally and export Gerber, BOM, PickAndPlace, Altium.
 1. Git commit.
